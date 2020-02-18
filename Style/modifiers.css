@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+/*font-family: 'Press Start 2P', cursive;*/
+
+/*-------MODIFIER-----------------*/
+.modify-sliders{
+    display: flex;
+    flex: 1;
+    width: 600px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    background: rgb(34, 34, 34);
+    -webkit-box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6); 
+    box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6);
+                
+                
+
+}
+.modify-title{
+
+    
+    border: 3px solid blue;
+    font-size: 15px;
+    justify-content: space-between;
+    font-family: 'Orbitron', sans-serif;
+    justify-content: stretch;
+    flex-direction: row;
+           
+}
+.sliders{
+    display: flex;
+    flex: 1;
+    background-color: rgb(34, 34, 34);
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-between;
+    
+}
+input[type=range]{
+    background: rgb(34, 34, 34);
+    margin: 10%;
+}
+
+.sliders input[type=range]::-moz-range-track{
+     background-color: greenyellow;
+         
+}
+
+.sliders input[type=range]::-moz-range-thumb{
+    background-color: orange;
+    border-radius: 0;
+    height: 10px;
+    width: 15px;
+    box-shadow: inset 0px 0px 0px 0px rgb(49, 49, 155, 0.5);
+    
+}
+
+.slider-title{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+}
+.slider-title p{
+    background-color: rgb(34, 34, 34);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.slider-title output{
+    height: 30px;
+    width: 60px;
+    margin-right: 20px;
+    margin-top: 90px;
+    border: 1px solid green;
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    color: chartreuse;
+    font-size: 28px;
+    
+}
+#slide-item-attack{
+    border: 2px solid green;
+    margin: 3px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: black;
+}
+
+
+
+#slide-item-decay{
+    border: 2px solid green;
+    display: flex;
+    flex: 1;
+    margin: 3px;
+    flex-direction: row;
+    background-color: rgb(17, 17, 17);
+    
+}
+#slide-item-decay p{
+    text-align: center;
+}
+#slide-item-sustain{
+    border: 2px solid green;
+    margin: 3px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: black; 
+    
+}
+#slide-item-sustain p{
+    text-align: center;
+}
+#slide-item-release{
+    border: 2px solid green;
+    margin: 3px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: black; 
+    
+       
+}
+#slide-item-release p{
+    text-align: center;
+}
+
+
+.range-title{
+    text-align: center;
+    border: 2px solid black;
+    font-family: 'Orbitron', sans-serif;
+    justify-content: space-around;
+         
+}
+.range-title .name{
+    align-items: center;
+    border: 2px solid black;
+    
+}

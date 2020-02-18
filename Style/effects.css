@@ -1,0 +1,63 @@
+.effect-panel{
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 2px solid greenyellow;
+    margin: 10px;
+    align-content: center;
+    -webkit-box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6), inset 2px 4px 30px -19px rgba(255,255,255,0.88); 
+box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6), inset 2px 4px 30px -19px rgba(255,255,255,0.88);
+   
+}
+.dist-fx{
+    flex: 1;
+    background-color: rgb(20, 220, 120);
+    height: 200px;
+    margin: 10px;
+    
+}
+.dist-fx p{
+    font-family: 'Odibee Sans', cursive;
+    background-color: rgb(20, 220, 120);
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-style: oblique;
+    margin: 10px;
+}
+.reverb-fx{
+    flex: 1;
+    border: 1px solid yellowgreen;
+    margin: 10px;
+    height: 200px;
+    background-color: cornflowerblue;   
+}
+.reverb-fx p{
+    background-color: cornflowerblue;  
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: -2px 2px seashell ;
+}
+.delay-fx{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-height: 200px;
+    border: 1px solid black;
+    margin: 10px;
+    height: 200px;
+    background-color: rgb(173, 42, 154);
+    flex-grow: 0;
+}
+.delay-fx p{
+    background-color: rgb(173, 42, 154);
+    font-family: 'Teko', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;   
+    text-align: center;
+}

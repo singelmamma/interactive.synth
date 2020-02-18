@@ -1,0 +1,115 @@
+/*------Oscillator--------*/
+.oscillator{
+    align-items: center;
+    border: 2px solid black;
+    flex: 0;
+    stroke-opacity: 100%;
+    background-color: rgb(34, 34, 34);
+    
+    
+}
+.osc-btn-container{
+    text-align: left;
+    display: inline-block;
+    justify-content: initial;   
+}
+.osc-btn-container button{
+    width: 100%;
+}
+#triangle-btn{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    border-width: inherit;
+     
+}
+
+#square-btn{
+    font-size: 15px;
+    font-weight: bolder;
+    border-width: inherit;
+    text-align: center;
+}
+.osc-btn-checked{
+    background-color: rgb(144, 209, 47);
+    color: rgb(231, 52, 52);
+    border-color: rgb(147, 209, 55);
+    box-shadow: 5px 3px 10px 0px rgb(255, 251, 2);
+    box-shadow: inset 5px 3px 10px 2px rgb(217, 255, 0);
+}
+#sine-btn{
+    font-size: 15px;
+    font-weight: bolder;
+    border-width: inherit;
+    text-align: center;
+   
+}
+
+#sawtooth-btn{
+    font-size: 15px;
+    font-weight: bolder;
+    border-width: inherit;
+    text-align: center;   
+}
+
+.osc-display{
+    background-color: rgb(34, 34, 34);
+    height: auto;
+}
+.osc-display svg{
+    border: 2px solid yellowgreen;
+    height: auto;
+    
+}
+#triangle{
+    stroke-dasharray: 413;
+    stroke-dashoffset: 826.3;
+    visibility: visible;
+    -webkit-animation: dash 3s linear infinite;
+    -moz-animation: dash 3s linear infinite;
+    animation: dash 3s linear infinite; 
+}
+
+
+#square{   
+    visibility: hidden;
+    stroke-dasharray: 700;
+    stroke-dashoffset: 1400;
+    stroke-opacity: 200%;
+    -webkit-animation: dash 5s linear infinite;  
+    -moz-animation: dash 5s linear infinite;
+    animation: dash 5s linear infinite;
+}
+#sawtooth{
+    
+    visibility: hidden;
+    stroke-dasharray: 700;
+    stroke-dashoffset: 1403.5;
+    -webkit-animation: dash 5s linear infinite;
+    -moz-animation: dash 5s linear infinite;
+    animation: dash 5s linear infinite;
+    
+}
+#sine{
+    visibility: hidden;
+    stroke-dasharray: 285;
+    stroke-dashoffset: 570;
+    -webkit-animation: dash 3s linear infinite;  
+    -moz-animation: dash 3s linear infinite;
+    animation: dash 3s linear infinite;
+}
+
+@keyframes dash{
+    to{
+        stroke-dashoffset: 0;
+    }
+    25%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.5;
+    }
+}

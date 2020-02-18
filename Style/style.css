@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron&display=swap");
+/*font-family: 'Orbitron', sans-serif;*/
+
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script&display=swap");
+/*font-family: 'Dancing Script', cursive;*/
+
+@import url("https://fonts.googleapis.com/css?family=Teko&display=swap");
+/*font-family: 'Teko', sans-serif;*/
+
+@import url("https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap");
+/*font-family: 'Odibee Sans', cursive;*/
+@import url("https://fonts.googleapis.com/css?family=Tomorrow&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+        /*font-family: 'Permanent Marker', cursive;*/
+*{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+body{
+    background: url(/background-img.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    
+    
+}
+.header h1{
+    position: relative;
+    text-align: center;
+    margin-top: 150px;
+    margin: 50px;
+    font-size: 100px;
+    margin-bottom: -200px;
+    font-weight: bolder;
+    font-family: 'Tomorrow', sans-serif;
+    background-image: -webkit-linear-gradient(#022486 0%, #0AD0FD 30%, #BDFCFC 40%, #D8FFFF 44%, #00081C 44%, #00081C 50%, #074A67 52%, #1CD8FE 60%, #7FEDFE 62%, #96F5FC 70%, #0FD8FA 73%, #0BD2FD 88%, #AFFDFF 100%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+
+}
+.header h3{
+position: absolute;
+  left: 0;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 80px;
+  margin-top: 20px;
+  margin-bottom: -100px;
+  color: #EB219B;
+  -webkit-text-fill-color: rgba(253, 90, 250, 1);
+  text-shadow: -2px -2px 0 #FFBAF2;
+  -webkit-filter: drop-shadow(3px 3px 1px #441F62);
+  -webkit-transform: skew(-5deg,-5deg);
+  font-weight: normal;
+  z-index: 2;
+  margin-left: 500px;
+  
+
+}
+.bottum-menu{
+    height: 200px;
+    background: purple;
+}
+.container{
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+    border: 20px solid black;
+    margin-top: 25%;
+    margin-left: 50%;
+    transform: translate(-50%, -25%);
+    margin-bottom: 50px;
+    max-width: 800px;
+}
+
+    
+    
+    
+.key-container{
+    
+    background: black;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    justify-content: center;
+    min-width: 100%;
+
+}
+#keys {
+    
+    height: 205px;
+    position: absolute;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    max-width: 800px;
+    border-top: 1px solid blue;
+    border-left: 5px solid blue;
+    border-right: 5px solid blue;
+    box-shadow: greenyellow;
+    
+    
+}
+.whitenote {
+   
+    height: 200px;
+    width: 45px;
+    margin-bottom: 2%;
+    background: white;
+    float: left;
+    border-right: 1px solid black;
+    position: relative;
+    box-shadow: inset 0px 1px 3px 1px black;
+}
+.border{
+    display: flex;
+    
+}
+.blacknote{
+    position: absolute;
+    height: 65%;
+    width: 55%;
+    z-index: 1;
+    background: #180d0d;
+    left: 70%;
+    box-shadow: inset 0px 1px 3px 0px white;
+}
+
+/*-------------FX container*/
+
+
+/*-----Control panel----------*/
+.control-panel{
+    display: flex;
+    flex: 0;
+    flex-direction: row;
+    border: 1px solid greenyellow;
+    color: green;
+    margin:10px;
+    -webkit-box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6), inset 9px 7px 37px -28px rgba(255,255,255,0.6); 
+    box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6), inset 9px 7px 37px -28px rgba(255,255,255,0.6);
+    
+}
+
+
+/*-----------------OCTAVE-----------*/
+.oct-buttons{
+    border: 1px solid black;
+    flex: 0;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: column;
+    -webkit-box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6), inset 9px 7px 37px -28px rgba(255,255,255,0.6); 
+    box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6), inset 9px 7px 37px -28px rgba(255,255,255,0.6);
+
+}
+
+.octav-content{
+    display: block;
+    align-content: center;
+    margin: 10px;
+}
+.octav-display{
+    width: 60px;
+    height: 60px;
+    margin: 12px;
+    border: 2px solid greenyellow;
+    border-radius: 20%;
+    
+}
+#oct-up{
+    width: 60px;
+    height: 60px;
+    margin: 12px;
+    border: 2px solid greenyellow;
+    border-radius: 20%;
+    pointer-events: visible;
+    
+}
+#oct-down{
+	width: 60px;
+    height: 60px;
+    margin: 12px;
+    border: 2px solid greenyellow;
+    border-radius: 20%;
+}
+.octav-content p{
+    text-align: center;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 20px;
+}

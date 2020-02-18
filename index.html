@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.5.35/Tone.js"></script>
+    <link rel="stylesheet" href="/Style/style.css">
+    <link rel="stylesheet" href="/Style/effects.css">
+    <link rel="stylesheet" href="/Style/oscilator.css">
+    <link rel="stylesheet" href="/Style/modifiers.css">
+    <title>Synth</title>
+</head>
+<body>
+    <div class="header">
+        <h1>SYNTHESIZER</h1>
+        <h3>Cyberspace</h3>
+
+        
+    </div>
+    <div class="border">
+    <div class="container">
+        
+        <div class="effect-panel">
+            <div class="dist-fx">
+                <p>Overdrive</p>
+                <div class="knobs">
+                    
+                </div>
+                <button id=dist-btn>Dist</button>
+            </div>
+            <div class="reverb-fx">
+                <p>Cloudy Reverb</p>
+                <div class="knobs">
+                    
+                </div>
+                <button id="reverb-btn">Reverb</button>
+            </div>
+            <div class="delay-fx">
+                <p>delay</p>
+                <div class="knobs">
+                    <input type="range" name="delaytime" id="delaytime" min="1" max="4" value="3">
+                    <input type="range" name="maxtime" id="maxdelaytime" min="1" max="5" value="5">
+                </div>
+                <button id="delay-btn">Delay</button>
+            </div>
+        </div>
+        
+        <div class="control-panel">
+            <div class="oscillator">
+                <div class="range-title">
+                    <div class="name">OSCILLATOR</div>
+                </div>
+                <div class="osc-btn-container">
+                    <button id="triangle-btn">Triangle</button>
+                    <button id="square-btn">Square</button>
+                    <button id="sine-btn">Sine</button>
+                    <button id="sawtooth-btn">Sawtooth</button>
+                </div>
+                <div class="osc-display">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        width="150" height="150" style="background-color: black;"
+                        viewBox="0 0 300 225">
+                        <path id="triangle" fill=""
+                            stroke="rgba(127, 255, 0, 0.5)" stroke-width="10"
+                            d="M 0 120 L 20 120 L 60 20 L 120 200 L 180 20 L 240 200 
+                            L 280 120 L 320 120 " />
+        
+                        <path id="square"
+                            fill="none" stroke="rgba(127, 255, 0, 0.5)" stroke-width="10"
+                            d="M 0 120 L 40 120 L 40 20 L 80 20 L 80 200 L 120 200 L 120 20 L 160 20 L 160 200 L 200 200 
+                            L 200 20 L 240 20 L 240 200 L 280 200 L 280 120 L 320 120 " />
+        
+                        <path id="sawtooth"
+                            fill="none" stroke="rgba(127, 255, 0, 0.5)" stroke-width="10"
+                            d="M 0 120 L 20 120 L 60 20 L 60 180 L 120 20 L 120 180 L 180 20 
+                            L 180 180 L 240 20 L 240 180 L 260 120 L 320 120 "/>
+                        <path id="sine"
+                            fill="none" stroke="rgba(127, 255, 0, 0.5)" stroke-width="10"
+                            d="M 0 120 Q 0 40 60 40 Q 120 40 120 120 Q 120 200 180 200 
+                            Q 240 200 240 120 Q 240 40 300 40 "/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="modify-sliders">
+                <div class="modify-title">
+                    <div class="name">MODIFIERS</div>
+                </div>
+
+                
+
+                <div class="sliders">
+                      <div class="slider-title">
+                        
+                      </div>
+                <div class="slider-title">
+                    <p>Attack</p>
+                    <div id="slide-item-attack">
+                        <input type="range" name="attack" orient="vertical" id="attack-slide" min="1" max="10" value="1" list="test-list">
+                        <output for="attack" id="attack-count"></output>
+                    </div>
+                </div>
+                
+                <div class="slider-title">
+                    <p>Decay</p>
+                    <div id="slide-item-decay">
+                        <input type="range" name="decay" orient="vertical" id="decay-slide" min="1" max="10" value="1">
+                        <output for="decay" id="decay-count"></output>
+                    </div>
+                </div>
+                
+                <div class="slider-title">
+                    <p>Sustain</p>
+                    <div id="slide-item-sustain">   
+                        <input type="range" name="sustain" orient="vertical" id="sustain-slide" min="1" max="10" value="3">
+                        <output for="sustain" id="sustain-count"></output>   
+                    </div>
+                </div>
+                
+                <div class="slider-title">
+                    <p>Release</p>
+                    <div id="slide-item-release">
+                        <input type="range" name="release" orient="vertical" id="release-slide" min="1" max="10" value="1">
+                        <output for="release" id="release-count"></output>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="oct-buttons">
+                <div class="range-title">
+                    <div class="name">OCTAVE</div>
+                </div>  
+                    <div class="octav-content">
+                        <p>UP</p>
+                        <button id="oct-up"></button>
+                        <div class="octav-display"></div>
+                        <button id="oct-down"></button>
+                        <p>DOWN</p>
+                    </div>
+            </div>
+        </div>
+        <div class="key-container">
+           <div id="keys">
+               
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+<div class="bottum-menu">Test</div>
+    
+    
+
+    <script src="script.js"></script>
+    <script src="scripttest.js"></script>
+</body>
+</html>
