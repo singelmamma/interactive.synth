@@ -12,50 +12,74 @@
     <title>Synth</title>
 </head>
 <body>
+    <div class="bg-image">
     <div class="header">
         <h1>SYNTHESIZER</h1>
-        <h3>Cyberspace</h3>
-
-        
+        <h3>Cyberspace</h3>  
     </div>
-    <div class="border">
+
     <div class="container">
         
         <div class="effect-panel">
             <div class="dist-fx">
                 <p>Overdrive</p>
                 <div class="knobs">
-                    
+                    <div class="effect-sliders">
+                        <input type="range" name="overdrive" orient="vertical" id="oversample" min="0" max="2" value="2">
+                        <input type="range" name="Distortion" orient="vertical" id="distortion" min="1" max="10" value="3">
+                    </div>
+                    <div class="dist-title">
+                        <h4>Oversample</h4>
+                        <h4>Distortion</h4>
+                    </div>
                 </div>
-                <button id=dist-btn>Dist</button>
+                <button class="effect-button" id=dist-btn>
+                </button>
             </div>
             <div class="reverb-fx">
                 <p>Cloudy Reverb</p>
                 <div class="knobs">
-                    
+                    <div class="effect-sliders">
+                        <input type="range" name="decay" orient="vertical" id="decay" min="1" max="4" value="3">
+                        <input type="range" name="predelay" orient="vertical" id="predelay" min="1" max="5" value="5">
+                    </div>
+                    <div class="reverb-title">
+                        <h4>Decay</h4>
+                        <h4>Pre Delay</h4>
+                    </div>
                 </div>
-                <button id="reverb-btn">Reverb</button>
+                <button class="effect-button" id="reverb-btn">
+
+                </button>
             </div>
             <div class="delay-fx">
                 <p>delay</p>
                 <div class="knobs">
-                    <input type="range" name="delaytime" id="delaytime" min="1" max="4" value="3">
-                    <input type="range" name="maxtime" id="maxdelaytime" min="1" max="5" value="5">
+                    <div class="effect-sliders">
+                        <input type="range" name="delaytime" orient="vertical" id="delaytime" min="1" max="4" value="1">
+                        <input type="range" name="maxtime" orient="vertical" id="maxdelaytime" min="1" max="5" value="5">
+                    </div>
+                    <div class="delay-title">
+                        <h4>Feedback</h4>
+                        <h4>Delay Time</h4>
+                    </div>
+                    
                 </div>
-                <button id="delay-btn">Delay</button>
+                <button class="effect-button" id="delay-btn">
+                </button>
             </div>
         </div>
         
         <div class="control-panel">
             <div class="oscillator">
-                <div class="range-title">
+                <div class="control-title">
                     <div class="name">OSCILLATOR</div>
                 </div>
                 <div class="osc-btn-container">
-                    <button id="triangle-btn">Triangle</button>
-                    <button id="square-btn">Square</button>
-                    <button id="sine-btn">Sine</button>
-                    <button id="sawtooth-btn">Sawtooth</button>
+                    <button id="triangle-btn" onclick="oscillatorChange(this.id)">Triangle</button>
+                    <button id="square-btn" onclick="oscillatorChange(this.id)">Square</button>
+                    <button id="sine-btn" onclick="oscillatorChange(this.id)">Sine</button>
+                    <button id="sawtooth-btn" onclick="oscillatorChange(this.id)">Sawtooth</button>
                 </div>
                 <div class="osc-display">
                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -63,18 +87,15 @@
                         viewBox="0 0 300 225">
                         <path id="triangle" fill=""
                             stroke="rgba(127, 255, 0, 0.5)" stroke-width="10"
-                            d="M 0 120 L 20 120 L 60 20 L 120 200 L 180 20 L 240 200 
-                            L 280 120 L 320 120 " />
+                            d="M 0 120 L 60 20 L 147 231 L 248 18 L 300 140 " />
         
                         <path id="square"
                             fill="none" stroke="rgba(127, 255, 0, 0.5)" stroke-width="10"
-                            d="M 0 120 L 40 120 L 40 20 L 80 20 L 80 200 L 120 200 L 120 20 L 160 20 L 160 200 L 200 200 
-                            L 200 20 L 240 20 L 240 200 L 280 200 L 280 120 L 320 120 " />
+                            d="M 0 120 L 40 120 L 40 20 L 140 20 L 140 220 L 240 220 L 240 120 L 300 120 " />
         
                         <path id="sawtooth"
                             fill="none" stroke="rgba(127, 255, 0, 0.5)" stroke-width="10"
-                            d="M 0 120 L 20 120 L 60 20 L 60 180 L 120 20 L 120 180 L 180 20 
-                            L 180 180 L 240 20 L 240 180 L 260 120 L 320 120 "/>
+                            d="M 0 120 L 100 20 L 100 220 L 300 20 L 300 120"/>
                         <path id="sine"
                             fill="none" stroke="rgba(127, 255, 0, 0.5)" stroke-width="10"
                             d="M 0 120 Q 0 40 60 40 Q 120 40 120 120 Q 120 200 180 200 
@@ -84,57 +105,56 @@
             </div>
             
             <div class="modify-sliders">
-                <div class="modify-title">
+                <div class="control-title">
                     <div class="name">MODIFIERS</div>
                 </div>
 
-                
-
                 <div class="sliders">
-                      <div class="slider-title">
+                      
+                    <div class="slider-title attack">
+                            <p>Attack</p>
+                            <div class="slide-item">
+                                <input type="range" name="attack" orient="vertical" id="attack-slide" min="1" max="10" value="1">
+                                <output for="attack" id="attack-count"></output>   
+                            </div>    
+                    </div>
+                        <div class="slider-title decay">
+                            <p>Decay</p>
+                            <div class="slide-item">
+                                <input type="range" name="decay" orient="vertical" id="decay-slide" min="1" max="10" value="1">
+                                <output for="decay" id="decay-count"></output>
+                            </div>
+                        </div>
                         
-                      </div>
-                <div class="slider-title">
-                    <p>Attack</p>
-                    <div id="slide-item-attack">
-                        <input type="range" name="attack" orient="vertical" id="attack-slide" min="1" max="10" value="1" list="test-list">
-                        <output for="attack" id="attack-count"></output>
+                        <div class="slider-title sustain">
+                            <p>Sustain</p>
+                            <div class="slide-item">   
+                                <input type="range" name="sustain" orient="vertical" id="sustain-slide" min="1" max="10" value="3">
+                                <output for="sustain" id="sustain-count"></output>   
+                            </div>
+                        </div>
+                        
+                        <div class="slider-title release">
+                            <p>Release</p>
+                            <div class="slide-item">
+                                <input type="range" name="release" orient="vertical" id="release-slide" min="1" max="10" value="1">
+                            <output for="release" id="release-count"></output>
+                            </div>
                     </div>
+                    
                 </div>
                 
-                <div class="slider-title">
-                    <p>Decay</p>
-                    <div id="slide-item-decay">
-                        <input type="range" name="decay" orient="vertical" id="decay-slide" min="1" max="10" value="1">
-                        <output for="decay" id="decay-count"></output>
-                    </div>
-                </div>
-                
-                <div class="slider-title">
-                    <p>Sustain</p>
-                    <div id="slide-item-sustain">   
-                        <input type="range" name="sustain" orient="vertical" id="sustain-slide" min="1" max="10" value="3">
-                        <output for="sustain" id="sustain-count"></output>   
-                    </div>
-                </div>
-                
-                <div class="slider-title">
-                    <p>Release</p>
-                    <div id="slide-item-release">
-                        <input type="range" name="release" orient="vertical" id="release-slide" min="1" max="10" value="1">
-                        <output for="release" id="release-count"></output>
-                    </div>
-                </div>
-            </div>
             </div>
             <div class="oct-buttons">
-                <div class="range-title">
+                <div class="control-title">
                     <div class="name">OCTAVE</div>
                 </div>  
                     <div class="octav-content">
                         <p>UP</p>
                         <button id="oct-up"></button>
-                        <div class="octav-display"></div>
+                        <div class="octav-display">
+                            <p id="octave-show"></p>
+                        </div>
                         <button id="oct-down"></button>
                         <p>DOWN</p>
                     </div>
@@ -147,9 +167,56 @@
             
         </div>
     </div>
+</div>   
+<div class="info-menu">
+    <div class="info-panel">
+        <h2 class="howtoplay">HOW TO PLAY</h2>
+        <p>Use the keyboard layout down below or click on the keys with the mouse</p>
+    </div>
     
+    <div class="keyboard">
+        <div id="keyboard-black">
+            <ul id="black1-2">
+                <p>2</p>
+                <p>3</p>
+            </ul>
+            <ul id="black3-5">
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+            </ul>
+            
+            <ul id="black6-7">
+                <p>S</p>
+                <p>D</p>
+            </ul>
+            <ul id="black8-10">
+                <p>G</p>
+                <p>H</p>
+                <p>J</p>
+            </ul>
+        </ul>
+    </div>
+    <div id="keyboard-white">
+        <ul id="white">
+            <p>Q</p>
+            <p>W</p>
+            <p>E</p>
+            <p>R</p>
+            <p>T</p>
+            <p>Y</p>
+            <p>U</p>
+            <p>Z</p>
+            <p>X</p>
+            <p>C</p>
+            <p>V</p>
+            <p>B</p>
+            <p>N</p>
+            <p>M</p>
+        </ul>
+    </div>
 </div>
-<div class="bottum-menu">Test</div>
+
     
     
 

@@ -9,28 +9,25 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
     background: rgb(34, 34, 34);
     -webkit-box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6); 
     box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6);
-                
-                
+    }
+.control-title{
 
-}
-.modify-title{
-
-    
-    border: 3px solid blue;
     font-size: 15px;
     justify-content: space-between;
     font-family: 'Orbitron', sans-serif;
     justify-content: stretch;
-    flex-direction: row;
-           
+    flex-direction: column;
+    margin: 10px;
+    display: flex;
+    text-align: center;           
 }
 .sliders{
     display: flex;
     flex: 1;
+    margin-top: 50px;
     background-color: rgb(34, 34, 34);
     flex-direction: row;
     justify-items: center;
@@ -61,17 +58,20 @@ input[type=range]{
     flex: 1;
     flex-direction: column;
     text-align: center;
+    
 }
 .slider-title p{
     background-color: rgb(34, 34, 34);
     font-family: 'Orbitron', sans-serif;
+    text-align: center;
 }
 
 .slider-title output{
     height: 30px;
     width: 60px;
     margin-right: 20px;
-    margin-top: 90px;
+    margin-top: 150%;
+    transform: translate(0, -150%);
     border: 1px solid green;
     background-color: black;
     font-family: 'Press Start 2P', cursive;
@@ -79,65 +79,18 @@ input[type=range]{
     font-size: 28px;
     
 }
-#slide-item-attack{
+.slide-item{
     border: 2px solid green;
     margin: 3px;
     display: flex;
     flex: 1;
     flex-direction: row;
     background-color: black;
+    transition: ease 1s;
+    max-height: 200px;
+}
+.slide-item:hover{
+    border:2px solid greenyellow;
 }
 
 
-
-#slide-item-decay{
-    border: 2px solid green;
-    display: flex;
-    flex: 1;
-    margin: 3px;
-    flex-direction: row;
-    background-color: rgb(17, 17, 17);
-    
-}
-#slide-item-decay p{
-    text-align: center;
-}
-#slide-item-sustain{
-    border: 2px solid green;
-    margin: 3px;
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    background-color: black; 
-    
-}
-#slide-item-sustain p{
-    text-align: center;
-}
-#slide-item-release{
-    border: 2px solid green;
-    margin: 3px;
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    background-color: black; 
-    
-       
-}
-#slide-item-release p{
-    text-align: center;
-}
-
-
-.range-title{
-    text-align: center;
-    border: 2px solid black;
-    font-family: 'Orbitron', sans-serif;
-    justify-content: space-around;
-         
-}
-.range-title .name{
-    align-items: center;
-    border: 2px solid black;
-    
-}

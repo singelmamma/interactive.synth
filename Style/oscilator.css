@@ -1,35 +1,30 @@
 /*------Oscillator--------*/
 .oscillator{
     align-items: center;
-    border: 2px solid black;
     flex: 0;
     stroke-opacity: 100%;
-    background-color: rgb(34, 34, 34);
-    
-    
+    margin: 10px;
+    display: flex;
+    flex-direction: column;  
 }
+
 .osc-btn-container{
     text-align: left;
     display: inline-block;
-    justify-content: initial;   
+    justify-content: center;
+    margin-top: 10px;   
 }
 .osc-btn-container button{
     width: 100%;
-}
-#triangle-btn{
     text-align: center;
     font-size: 15px;
     font-weight: bolder;
     border-width: inherit;
-     
+    cursor: pointer;
+    
+    
 }
 
-#square-btn{
-    font-size: 15px;
-    font-weight: bolder;
-    border-width: inherit;
-    text-align: center;
-}
 .osc-btn-checked{
     background-color: rgb(144, 209, 47);
     color: rgb(231, 52, 52);
@@ -37,26 +32,14 @@
     box-shadow: 5px 3px 10px 0px rgb(255, 251, 2);
     box-shadow: inset 5px 3px 10px 2px rgb(217, 255, 0);
 }
-#sine-btn{
-    font-size: 15px;
-    font-weight: bolder;
-    border-width: inherit;
-    text-align: center;
-   
-}
-
-#sawtooth-btn{
-    font-size: 15px;
-    font-weight: bolder;
-    border-width: inherit;
-    text-align: center;   
-}
 
 .osc-display{
-    background-color: rgb(34, 34, 34);
+
     height: auto;
 }
 .osc-display svg{
+    margin: 10px;
+    margin-top: 30px;
     border: 2px solid yellowgreen;
     height: auto;
     
@@ -75,7 +58,6 @@
     visibility: hidden;
     stroke-dasharray: 700;
     stroke-dashoffset: 1400;
-    stroke-opacity: 200%;
     -webkit-animation: dash 5s linear infinite;  
     -moz-animation: dash 5s linear infinite;
     animation: dash 5s linear infinite;

@@ -20,27 +20,39 @@
     
 }
 body{
+    background-color: black;
+}
+.bg-image{
     background: url(/background-img.jpg);
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    
-    
+    background-size: 100% 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
 }
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
 .header h1{
     position: relative;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 200px;
     margin: 50px;
     font-size: 100px;
     margin-bottom: -200px;
     font-weight: bolder;
+    font-style: oblique;
     font-family: 'Tomorrow', sans-serif;
+    text-decoration: underline;
     background-image: -webkit-linear-gradient(#022486 0%, #0AD0FD 30%, #BDFCFC 40%, #D8FFFF 44%, #00081C 44%, #00081C 50%, #074A67 52%, #1CD8FE 60%, #7FEDFE 62%, #96F5FC 70%, #0FD8FA 73%, #0BD2FD 88%, #AFFDFF 100%); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #fff;
+  
+  
 
 }
 .header h3{
@@ -48,8 +60,8 @@ position: absolute;
   left: 0;
   font-family: 'Permanent Marker', cursive;
   font-size: 80px;
-  margin-top: 20px;
-  margin-bottom: -100px;
+  margin-top: 5px;
+  margin-bottom: 100px;
   color: #EB219B;
   -webkit-text-fill-color: rgba(253, 90, 250, 1);
   text-shadow: -2px -2px 0 #FFBAF2;
@@ -57,26 +69,22 @@ position: absolute;
   -webkit-transform: skew(-5deg,-5deg);
   font-weight: normal;
   z-index: 2;
-  margin-left: 500px;
+  margin-left: 650px;
   
 
 }
-.bottum-menu{
-    height: 200px;
-    background: purple;
-}
+
 .container{
     background-color: rgb(34, 34, 34);
     display: flex;
     flex-direction: column;
+    align-content: center;
     flex: 1;
     align-items: stretch;
-    border: 20px solid black;
-    margin-top: 25%;
-    margin-left: 50%;
-    transform: translate(-50%, -25%);
-    margin-bottom: 50px;
+    border: 2px solid yellowgreen;
     max-width: 800px;
+    margin: 200px;
+    margin-bottom: 30px;
 }
 
     
@@ -95,16 +103,13 @@ position: absolute;
 #keys {
     
     height: 205px;
-    position: absolute;
     background-color: rgb(34, 34, 34);
     display: flex;
     justify-content: center;
     width: 800px;
     max-width: 800px;
-    border-top: 1px solid blue;
-    border-left: 5px solid blue;
-    border-right: 5px solid blue;
-    box-shadow: greenyellow;
+    border-left: 2px yellowgreen;
+    
     
     
 }
@@ -119,6 +124,7 @@ position: absolute;
     position: relative;
     box-shadow: inset 0px 1px 3px 1px black;
 }
+
 .border{
     display: flex;
     
@@ -133,6 +139,10 @@ position: absolute;
     box-shadow: inset 0px 1px 3px 0px white;
 }
 
+.noteclick{
+    background-color: gray;
+}
+
 /*-------------FX container*/
 
 
@@ -141,11 +151,12 @@ position: absolute;
     display: flex;
     flex: 0;
     flex-direction: row;
-    border: 1px solid greenyellow;
+    border: 2px solid greenyellow;
     color: green;
     margin:10px;
     -webkit-box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6), inset 9px 7px 37px -28px rgba(255,255,255,0.6); 
     box-shadow: inset 9px 7px 37px -28px rgba(255,255,255,0.6), inset 9px 7px 37px -28px rgba(255,255,255,0.6);
+    margin-top: -3px;
     
 }
 
@@ -173,16 +184,22 @@ position: absolute;
     margin: 12px;
     border: 2px solid greenyellow;
     border-radius: 20%;
-    
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;    
 }
+
+#octave-show{
+    margin: 7px;
+    font-size: 35px;
+}
+
 #oct-up{
     width: 60px;
     height: 60px;
     margin: 12px;
     border: 2px solid greenyellow;
     border-radius: 20%;
-    pointer-events: visible;
-    
+    cursor: pointer;   
 }
 #oct-down{
 	width: 60px;
@@ -190,9 +207,104 @@ position: absolute;
     margin: 12px;
     border: 2px solid greenyellow;
     border-radius: 20%;
+    cursor: pointer;
 }
+
 .octav-content p{
     text-align: center;
     font-family: 'Odibee Sans', cursive;
     font-size: 20px;
 }
+
+.info-menu{
+    height: 200px;
+    background: purple;
+}
+
+.info-panel{
+    text-align: center;
+    color: white;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.info-panel p{
+    margin: 10px;
+}
+
+.keyboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+#keyboard-black{
+    display: flex;
+    flex-direction: row;
+}
+
+#keyboard-black p{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    text-align: center;
+    -webkit-box-shadow: inset 6px 6px 13px -11px rgba(255,255,255,0.87); 
+box-shadow: inset 6px 6px 13px -11px rgba(255,255,255,0.87);
+}
+
+#black1-2{
+    display: flex;
+    flex: 1;
+    margin-right: 10%;
+    margin-left: -12%;
+}
+
+#black3-5{
+    display: flex;
+    flex: 2;
+    margin-right: 8%;
+    margin-left: -2%;
+}
+
+#black6-7{
+    display: flex;
+    flex: 1;
+    margin-right: 8%;
+    
+}
+#black8-10{
+    display: flex;
+    flex: 2;
+    margin-right: 10%;
+}
+
+#keyboard-white{
+    display: flex;
+    flex-direction: row;
+}
+
+#white{
+    display: flex;
+}
+
+#keyboard-white p{
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 1px;
+    height: 40px;
+    width: 40px;
+    -webkit-box-shadow: inset 6px 6px 13px -11px rgba(0,0,0,0.87), inset 2px 8px 13px -11px rgba(0,0,0,0.87); 
+    box-shadow: inset 6px 6px 13px -11px rgba(0,0,0,0.87), inset 2px 8px 13px -11px rgba(0,0,0,0.87);
+}
+
